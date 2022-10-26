@@ -1,28 +1,14 @@
 
-import { Box } from '@chakra-ui/react'
-import { useToast } from '@chakra-ui/react'
-import { Button } from '@chakra-ui/react'
-import { ChatIcon} from '@chakra-ui/icons'
-
+import { Box, Button } from '@chakra-ui/react'
 function Task(props) {
-
-    const toast = useToast()
-
+//Componente recebendo valor do elemento pai (props)
+//observem: props.valor (mesmo nome do valor enviado pelo elemento pai)
+    const { tarefa, idTask } = props.tarefa
+    console.log(tarefa, idTask)
     return (
         <Box w='30%' m={5}>
-          
-            <Button w='100%'
-                onClick={() =>
-                    toast({
-                        title: 'Tarefa realizada',
-                        description: "Parabéns, você tá indo bem.",
-                        status: 'success',
-                        duration: 3000,
-                        isClosable: true,
-                    })
-                }
-            >
-                {props.tarefa}
+            <Button w='100%' onClick={()=>props.deleteTask(idTask)}>
+                {tarefa}
             </Button>
         </Box>)
 }
