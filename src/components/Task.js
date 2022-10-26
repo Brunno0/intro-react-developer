@@ -1,6 +1,5 @@
 
-import { Box,Button } from '@chakra-ui/react'
-
+import { Box, Button } from '@chakra-ui/react'
 function Task(props) {
 //Componente recebendo valor do elemento pai (props)
 //observem: props.valor (mesmo nome do valor enviado pelo elemento pai)
