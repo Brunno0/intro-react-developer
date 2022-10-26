@@ -1,20 +1,13 @@
-import PrimeJsx from './components/PrimeJsx';
+
+import PassandoProps from "./components/PassandoPros"
 import './App.css';
+// 1. Import the extendTheme function
+
+
 
 function App() {
   return (
-    <header>
-      <h1> Primeiro App</h1>
-      <ul>
-      <li> Podemos usar HTML aqui</li>
-     <li> Mas, vamos conhecer o JSX</li>
-   </ul>
-    <PrimeJsx>
-      
-    </PrimeJsx>
-    
-
-    </header>
+   <PassandoProps></PassandoProps>
   );
 }
 
