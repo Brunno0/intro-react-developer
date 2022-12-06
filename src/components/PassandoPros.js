@@ -20,6 +20,7 @@ function PassandoProps() {
         
     }
     const handleTask = (event) => {
+        event.preventDefault();
         setTask(event.target.value)
       }
 
@@ -37,6 +38,7 @@ function PassandoProps() {
             <Task key={task.idTask} tarefa={task} deleteTask={deleteTask}></Task>
         )
     })
+
     return (<div id="divProps">
       <Heading m={5} >Lista de tarefas</Heading>
         <Box w='30%' m={5}   >
